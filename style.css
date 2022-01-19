@@ -1,0 +1,53 @@
+/* This is what we use to style our webpage */
+
+/* This is where you load your font */
+@font-face {
+  font-family: "NaZareVF";
+  src: url("NaZareVF.ttf") format("truetype-variations");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: rgb(107, 145, 209);
+  background: linear-gradient(
+    180deg,
+    rgba(107, 145, calc(209 - var(--sound)), 0.5) 0%,
+    rgba(231, 193, 188, 1) 65%,
+    rgba(calc(var(--sound) * 2.5), 200, 255, 0.5) 100%
+  ); /* Change background color here */
+  color: white; /* Change text color here */
+  font-size: 20vw;
+}
+
+canvas {
+  display: none;
+}
+
+.type {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100vh;
+  width: 100vw;
+  font-family: "NaZareVF", serif; /* This is where you load the font */
+  font-variation-settings: "wght" var(--sound);
+}
+/* span {
+  background-color: blueviolet;
+} */
+
+/* Animation */
+@keyframes animateText {
+  from {
+    font-variation-settings: "wght" 0;
+  }
+  to {
+    font-variation-settings: "wght" 100;
+  }
+}
